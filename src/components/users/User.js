@@ -87,12 +87,7 @@ class User extends Component {
                 {blog && (
                   <Fragment>
                     <strong>Website: </strong>{' '}
-                    <a
-                      href={blog}
-                      target='_blank'
-                      without
-                      rel='noopener noreferrer'
-                    >
+                    <a href={blog} target='_blank' rel='noopener noreferrer'>
                       {blog}
                     </a>
                   </Fragment>
