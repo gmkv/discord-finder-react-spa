@@ -13,6 +13,7 @@ class App extends Component {
   state = {
     users: [],
     user: {},
+    repos: [],
     loading: false,
     alert: null
   };
@@ -49,13 +50,14 @@ class App extends Component {
       {
         params: {
           per_page: 5,
-          sort: 'created:asc',
+          sort: 'updated',
+          direction: 'desc',
           client_id: process.env.REACT_APP_GITHUB_CLIENT_ID,
           client_secret: process.env.REACT_APP_GITHUB_CLIENT_SECRET
         }
       }
     );
-    this.setState({ loading: false, user: res.data });
+    this.setState({ loading: false, repos: res.data });
   };
 
   // Clears search results from state
@@ -68,7 +70,7 @@ class App extends Component {
   };
 
   render() {
-    const { users, user, loading } = this.state;
+    const { users, user, repos, loading } = this.state;
 
     return (
       <Router>
@@ -92,9 +94,7 @@ class App extends Component {
                   </Fragment>
                 )}
               />
-
               <Route exact path='/about' component={About} />
-
               <Route
                 exact
                 path='/user/:login'
@@ -103,6 +103,8 @@ class App extends Component {
                     {...props}
                     getUser={this.getUser}
                     user={user}
+                    getUserRepos={this.getUserRepos}
+                    repos={repos}
                     loading={loading}
                   />
                 )}

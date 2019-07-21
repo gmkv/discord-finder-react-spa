@@ -20,7 +20,6 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
   background-color: #fff;
   color: #333;
 }
@@ -380,6 +379,22 @@ table th {
 
 .navbar .welcome span {
   margin-right: 0.6rem;
+}
+
+/*Repo*/
+.repo__badges {
+  margin: 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.repo__desc {
+  color: #8f8f8f;
+}
+
+.badge-language {
+  align-self: flex-start;
 }
 
 /* Mobile Styles */
