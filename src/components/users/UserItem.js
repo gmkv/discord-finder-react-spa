@@ -1,5 +1,5 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
   return (
@@ -21,10 +21,10 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
 };
 
 UserItem.propTypes = {
-  user: propTypes.shape({
-    login: propTypes.string.isRequired,
-    avatar_url: propTypes.string.isRequired,
-    html_url: propTypes.string.isRequired
+  user: PropTypes.shape({
+    login: PropTypes.string.isRequired,
+    avatar_url: PropTypes.string.isRequired,
+    html_url: PropTypes.string.isRequired
   }).isRequired
 };
 
