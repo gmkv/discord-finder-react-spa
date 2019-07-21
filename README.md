@@ -1,2 +1,3 @@
-## This web app lets you search for Github users, read their profile info.
+## This web app lets you search the users on Github and inspect their profile info, repos, stars, followers.
+
 ### Written in: React.

@@ -4,9 +4,9 @@
 :root {
   --primary-color: #7f74ff;
   --dark-color: #3e4451;
-  --light-color: #fbfbff;
-  --danger-color: #ff3726;
-  --success-color: #26ff37;
+  --light-color: #c5c5c5;
+  --danger-color: #e64c3e;
+  --success-color: #61e96d;
 }
 
 *,
@@ -207,7 +207,7 @@ img {
   border: none;
   cursor: pointer;
   margin-right: 0.5rem;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in, color 0.2s ease-in;
   outline: none;
 }
 
@@ -298,6 +298,10 @@ img {
 
 .btn:hover {
   opacity: 0.8;
+}
+
+.btn-primary:hover {
+  color: rgb(219, 219, 219);
 }
 
 .bg-light,
